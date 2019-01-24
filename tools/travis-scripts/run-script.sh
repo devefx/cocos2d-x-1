@@ -356,6 +356,8 @@ function run_after_merge()
 
 echo "COCOS_CONSOLE_ROOT=${COCOS_CONSOLE_ROOT}"
 
+
+
 # build pull request
 if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     if [ "$BUILD_TARGET" == "android_cocos_new_test" ]; then
@@ -408,3 +410,5 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 fi
 
 echo "COCOS_CONSOLE_ROOT=${COCOS_CONSOLE_ROOT}"
+
+./tests/lua-tests/project/proj.android/app/get_environment.sh
