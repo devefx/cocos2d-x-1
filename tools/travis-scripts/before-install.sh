@@ -121,4 +121,8 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     fi 
 fi
 
+if [ -d "~/.cocos" ] ; then
+    echo "has ~/.cocos"
+fi
+
 echo "before-install.sh execution finished!"
