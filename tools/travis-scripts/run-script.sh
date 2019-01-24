@@ -354,6 +354,8 @@ function run_after_merge()
     generate_pull_request_for_binding_codes_and_cocosfiles
 }
 
+echo "COCOS_CONSOLE_ROOT=${COCOS_CONSOLE_ROOT}"
+
 # build pull request
 if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
     if [ "$BUILD_TARGET" == "android_cocos_new_test" ]; then
@@ -404,3 +406,5 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
         run_after_merge
     fi
 fi
+
+echo "COCOS_CONSOLE_ROOT=${COCOS_CONSOLE_ROOT}"
